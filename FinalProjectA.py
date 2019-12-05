@@ -14,7 +14,10 @@ image.show() # shows the new edited version of the image
 
 taco3 = [] # a list to stole the dictionaries in
 
-for i in range(3): # I've used a for loop here so I can get the result from url 3 times (the dictionaries)
-    taco_recipe_urldata = requests.get('https://taco-1150.herokuapp.com/random/?full_taco=true').json()  # using the requests library to open the url link and get the dictionary that we are gonna use
-    taco3.append(taco_recipe_urldata) # adds the results to the list created earlier
-print(taco3)
+for i in range(3):# I've used a for loop here so I can get the result from url 3 times (the dictionaries)
+    try: # I've added the try and except part just if there was no internet
+        taco_recipe_urldata = requests.get('https://taco-1150.herokuapp.com/random/?full_taco=true').json()  # using the requests library to open the url link and get the dictionary that we are gonna use
+        taco3.append(taco_recipe_urldata) # adds the results to the list created earlier
+        print(taco3)
+    except:
+        print('You are not online') # Prints if there is no internet
