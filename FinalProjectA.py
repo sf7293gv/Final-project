@@ -26,3 +26,5 @@ for i in range(3):  # I've used a for loop here so I can get the result from url
 word_document = docx.Document('RandomTacoWordDoc.docx') # This will open a new word document
 
 word_document.add_paragraph('Random Taco Cookbook', 'Title') # This will add a heading in the new word document
+
+word_document.add_picture('usingInWord.jpeg') # This statement is gonna use the save image and add it to the new word document
