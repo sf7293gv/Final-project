@@ -31,4 +31,6 @@ word_document.add_picture('usingInWord.jpeg')  # This statement is gonna use the
 
 word_document.add_paragraph('Tai\'s Captures')  # This is gonna add a new paragraph with a name in it
 
+word_document.add_paragraph('https://taco-1150.herokuapp.com/random/?full_taco=true')  # This is gonna add a new paragraph with the taco url in it
+
 word_document.add_paragraph('Mohammad Zabaneh')  # This is gonna add a new paragraph with my name in it
