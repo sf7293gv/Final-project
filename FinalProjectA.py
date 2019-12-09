@@ -11,6 +11,7 @@ iimage = ImageDraw.Draw(image)  # I've used the Imagedraw library to be able to 
 font = ImageFont.truetype('DejaVuSans.ttf', 25)  # using a database for the fonts
 iimage.text([10, 475], 'Random Taco Cookbook', fill='black', font=font)  # drawing text on the image
 image.show()  # shows the new edited version of the image
+image.save('usingInWord.jpeg')  # This statement saves the image so we can be able to use later in the project
 
 taco3 = []  # a list to stole the dictionaries in
 
@@ -25,4 +26,3 @@ for i in range(3):  # I've used a for loop here so I can get the result from url
 word_document = docx.Document('RandomTacoWordDoc.docx') # This will open a new word document
 
 word_document.add_paragraph('Random Taco Cookbook', 'Title') # This will add a heading in the new word document
-
