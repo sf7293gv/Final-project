@@ -27,6 +27,8 @@ word_document = docx.Document()  # This will open a new word document
 
 word_document.add_paragraph('Random Taco Cookbook', 'Title')  # This will add a heading in the new word document
 
-word_document.add_picture('usingInWord.jpeg')  # This statement is gonna use the save image and add it to the new word document
+word_document.add_picture('usingInWord.jpeg')  # This statement is gonna use the save image and add it to theNewDocument
 
 word_document.add_paragraph('Tai\'s Captures')  # This is gonna add a new paragraph with a name in it
+
+word_document.add_paragraph('Mohammad Zabaneh')  # This is gonna add a new paragraph with my name in it
