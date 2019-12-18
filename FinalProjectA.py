@@ -36,13 +36,9 @@ word_document.add_paragraph('https://taco-1150.herokuapp.com/random/?full_taco=t
 
 word_document.add_paragraph('Mohammad Zabaneh')  # This is gonna add a new paragraph with my name in it
 
-# word_document.add_page_break()
-
-for i in taco3:
-    word_document.add_paragraph(taco_recipe_url_data["seasoning"])
-    word_document.add_paragraph(taco_recipe_url_data["condiment"])
-    word_document.add_paragraph(taco_recipe_url_data["mixin"])
-    word_document.add_paragraph(taco_recipe_url_data["base_layer"])
-    word_document.add_paragraph(taco_recipe_url_data["shell"])
-
-
+for i in range(len(taco3)): # This for loop is gonna pull sections from the taco3 list (the API dictionary)
+    word_document.add_paragraph(taco3[0]["seasoning"]["recipe"]) # --> first dictionary (seasoning) --> recipe key --> = recipe value
+    word_document.add_paragraph(taco3[0]["condiment"]["recipe"]) # --> second dictionary (condiment) --> recipe key --> = recipe value
+    word_document.add_paragraph(taco3[0]["mixin"]["recipe"]) # --> third dictionary (mixin) --> recipe key --> = recipe value
+    word_document.add_paragraph(taco3[0]["base_layer"]["recipe"]) # --> fourth dictionary (base_layer) --> recipe key --> = recipe value
+    word_document.add_paragraph(taco3[0]["shell"]["recipe"]) # -->  fifth dictionary (shell) --> recipe key --> = recipe value
